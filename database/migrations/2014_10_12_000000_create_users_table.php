@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_black')->default(0)->comment('블랙리스트 여부');
         });
 
-        DB::statement("ALERT TABLE". $this->name . " comment '" . $this->comment ."'");
+        DB::statement("ALTER TABLE ". $this->name . " comment '" . $this->comment ."'");
     }
 
     /**
